@@ -7,5 +7,5 @@ class ProductSchema(ma.SQLAlchemyAutoSchema):
         load_instance = True
         ordered = True
 
-user_schema = ProductSchema()
-user_list_schema = ProductSchema(many=True) #list
+product_schema = ProductSchema()
+product_list_schema = ProductSchema(many=True) #list
