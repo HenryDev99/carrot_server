@@ -8,6 +8,7 @@ def get_list():
     for data in res:
         temp_obj = {}
         temp_arry = []
+        temp_obj['id'] = data.productIdx
         temp_obj['title'] = data.title
         temp_obj['content'] = data.content
         temp_obj['price'] = data.price
