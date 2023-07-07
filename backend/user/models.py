@@ -20,8 +20,9 @@ class User(Model):
     mannerTamp = Column(db.Numeric(precision=4, scale=1), nullable=False, default=36.5)
     tradeRate = Column(db.Numeric(precision=4, scale=1), nullable=False, default=0)
     responseRate = Column(db.Numeric(precision=4, scale=1), nullable=False, default=0)
+    region = Column(db.String(200), nullable=True)
 
-    def __init__(self, phoneNumber, id, email, name, password, createAt, status, usrNickname, imgUrl, mannerTamp, tradeRate, responseRate):
+    def __init__(self, phoneNumber, id, email, name, password, createAt, status, usrNickname, imgUrl, mannerTamp, tradeRate, responseRate, region):
         self.phoneNumber = phoneNumber
         self.id = id
         self.email = email
@@ -34,6 +35,7 @@ class User(Model):
         self.mannerTamp = mannerTamp
         self.tradeRate = tradeRate
         self.responseRate = responseRate
+        self.region = region
 
     def __repr__(self):
         return f"<User {self.id} - {self.email}>"
