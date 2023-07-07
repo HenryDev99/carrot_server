@@ -18,9 +18,13 @@ class Product(Model):
     status = Column(db.String(10), nullable=False)
     regionIdx = Column(db.Integer, nullable=True)
     priceProposal = Column(db.String(45), nullable=True)
-    productPhotoIdx = Column(db.Integer, nullable=True)
+    productPhotoUrl1 = Column(db.String(250), nullable=True)
+    productPhotoUrl2 = Column(db.String(250), nullable=True)
+    productPhotoUrl3 = Column(db.String(250), nullable=True)
+    productPhotoUrl4 = Column(db.String(250), nullable=True)
+    productPhotoUrl5 = Column(db.String(250), nullable=True)
 
-    def __init__(self, productIdx, title, content, price, userIdx, categoryIdx, createdAt, updatedAt, status, regionIdx, priceProposal, productPhotoIdx):
+    def __init__(self, productIdx, title, content, price, userIdx, categoryIdx, createdAt, updatedAt, status, regionIdx, priceProposal, productPhotoUrl1, productPhotoUrl2, productPhotoUrl3, productPhotoUrl4, productPhotoUrl5):
         self.productIdx = productIdx
         self.title = title
         self.content = content
@@ -32,7 +36,11 @@ class Product(Model):
         self.status = status
         self.regionIdx = regionIdx
         self.priceProposal = priceProposal
-        self.productPhotoIdx = productPhotoIdx
+        self.productPhotoUrl1 = productPhotoUrl1
+        self.productPhotoUrl2 = productPhotoUrl2
+        self.productPhotoUrl3 = productPhotoUrl3
+        self.productPhotoUrl4 = productPhotoUrl4
+        self.productPhotoUrl5 = productPhotoUrl5
 
     def __repr__(self):
         return f"<Product {self.title} - {self.content}>"
